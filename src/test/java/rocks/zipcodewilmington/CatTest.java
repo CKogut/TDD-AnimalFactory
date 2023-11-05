@@ -79,9 +79,26 @@ public class CatTest {
     }
 
     // TODO - Create tests for `Integer getId()`
-    
+    @Test
+    public void testGetID() {
+        int expected = 9876;
+        Cat cat = new Cat(null, null, expected);
+        int actual = cat.getId();
+        Assert.assertEquals(expected, actual);
+    }
+        // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
 
-    // TODO - Create test to check Animal inheritance; google search `java instanceof keyword`
-    // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
+    @Test
+    public void testAnimalInheritance(){
+        Cat cat = new Cat(null,null,null);
+        Assert.assertTrue(cat instanceof Animal);
+    }
+
+        // TODO - Create test to check Mammal inheritance; google search `java instanceof keyword`
+    @Test
+    public void testMammalInheritance(){
+        Cat cat = new Cat(null, null, null);
+        Assert.assertTrue(cat instanceof Mammal);
+    }
 
 }
